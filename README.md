@@ -13,7 +13,6 @@ Quá trình cập nhật tồn kho sẽ trải qua 2 bước
 
 
 Request
-=======
 
 
 HTTP Request
@@ -24,8 +23,6 @@ HTTP Request
 Header
 ------
 
-
-::
 
     Content-Type:application/json
 
@@ -38,9 +35,7 @@ Hành động đăng nhập vào hệ thống của Vật Giá
 Sau khi login thành công, hệ thống sẽ trả về ID của user đăng nhập, cần lưu ID này để truyền lên trong quá trình cập nhật tồn kho
 
 Mẫu JSON.
-"""""""
 
-.. code-block:: json
 
     {
         "jsonrpc":"2.0",
@@ -63,10 +58,8 @@ Mẫu JSON.
 | password       | string  | Mật khẩu đăng nhập                       |
 
 Output
-""""""
-Sau khi đăng nhập thành công, thông tin trả về có dạng
 
-.. code-block:: json
+Sau khi đăng nhập thành công, thông tin trả về có dạng
 
     {
         "jsonrpc": "2.0",
@@ -82,9 +75,6 @@ CẬP NHẬT TỒN KHO
 -----
 
 Mẫu JSON.
-""""""
-
-.. code-block:: json
 
     {
     "jsonrpc":"2.0",
@@ -117,18 +107,13 @@ Mẫu JSON.
 .. _data:
 
 Data
-""""
 
 Mẫu JSON.
-
-.. code-block:: json
 
     {
       "supplier_product_code": "qty",
       "supplier_product_code": "qty",
     }
-
-
 
 
 |   Thuộc tính         | Giá trị |                  Mô tả                   |
@@ -141,29 +126,12 @@ Mẫu JSON.
 
 
 Output
-""""""
-
-.. _Thành công
-
-.. code-block:: json
 
     return {
         "code": 200,
         "message": "Success",
     }
 
-
-.. _Không thành công
-
-.. code-block:: json
-
-    return {
-        "code": 400,
-        "error": {
-            "type": "ecls",
-            "message": "emsg",
-        }
-    }
 
 THÔNG TIN API
 =============
@@ -175,15 +143,8 @@ THÔNG TIN API
 | password             | d2,v(uJX!@cFB8KHNM4G3GUme=,r8]| Mật khẩu đăng nhập                       |
 
 Example
-=======
-
-Login
------
 
 Request
-"""""""
-
-.. code-block:: json
 
     {
         "jsonrpc":"2.0",
@@ -200,48 +161,10 @@ Request
     }
     
 Output
-""""""
-
-.. code-block:: json
 
     {
         "jsonrpc": "2.0",
         "result": 43
-    }
-
-Cập nhật tồn kho
----------------
-
-Request
-"""""""
-
-.. code-block:: json
-
-    {
-    "jsonrpc":"2.0",
-    "method":"call",
-    "params":{
-            "service":"object",
-            "method":"execute",
-            "args":[
-                        "prod-v2",
-                        43,
-                        "d2,v(uJX!@cFB8KHNM4G3GUme=,r8]",
-                        "vta.store",
-                        "update_qty_vta_store",
-                        {"70049851" : 4,"70049859" : 5}
-                    ]
-            }
-    }
-    
-Output
-""""""
-
-.. code-block:: json
-
-    return {
-        "code": 200,
-        "message": "Success",
     }
 
     
