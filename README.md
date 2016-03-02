@@ -1,16 +1,9 @@
 
-CẬP NHẬT TỒN KHO SẢN PHẨM
+DANH SÁCH SẢN PHẨM NỔI BẬT
 ********************
 
 
-API này cho phép Viễn Thông A cập nhật số lượng tồn kho của sản phẩm sang Vật Giá.
-
-Quá trình cập nhật tồn kho sẽ trải qua 2 bước
-
-1. Login để lấy user_id
-
-2. Cập nhật tồn kho
-
+API này cho phép lấy tất cả các sản phẩm của trang chủ được cấu hình từng sản phẩm.
 
 Request
 
@@ -18,7 +11,7 @@ Request
 HTTP Request
 ------------
 
-    POST http://odoo.vnpid.com/jsonrpc
+    GET http://10.10.40.171/product-api/HomeProductMobis
 
 Header
 ------
