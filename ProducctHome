@@ -1,0 +1,44 @@
+
+DANH SÁCH SẢN PHẨM NỔI BẬT
+********************
+
+API này cho phép lấy tất cả các sản phẩm của trang chủ được cấu hình từng sản phẩm.
+
+HTTP Request
+------------
+
+    GET http://10.10.40.171/product-api/HomeProductMobis
+
+Output
+
+Sau khi đăng nhập thành công, thông tin trả về có dạng
+
+    {
+      "Result": true
+      "StatusCode": "Success"
+      "Message": null
+      "SysMessage": null
+      "Data": {
+              "ProductId": 181097
+              "CategoryId": 152708
+              "RootCategoryId": 152535
+              "ProductCode": "12772"
+              "ProductName": "iPhone 5s 16GB (Gray/ silver)"
+              "ImageDetail": "~/Upload/2016/2/3/iphone-5s-silver-4.jpg"
+              "PriceHeadOffice": 7990000
+              "PriceUnderHeadOffice": 7990000
+              "PriceOnline": 7990000
+              "PriceUnderOnline": 7990000
+              "PriceExpected": 0
+              "StatusExist": "A"
+              "StatusStock": "[Liên hệ]"
+            }
+    }
+
+|   Thuộc tính   | Giá trị |                  Mô tả                   |
+| -------------- |:-------:| ----------------------------------------:|
+| Result         | bool    |                                          |
+| StatusCode     | string  |                                          |
+| Message        | string  |                                          |
+| SysMessage     | string  |                                          |    
+| Data           | Area    | danh sách sản phẩm                       |
